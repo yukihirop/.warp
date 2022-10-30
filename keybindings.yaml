@@ -1,0 +1,5 @@
+---
+"workspace:move_tab_right": alt-cmd-right
+"input:toggle_workflows": shift-cmd-W
+"workspace:move_tab_left": alt-cmd-left
+"input:search_command_history": ctrl-r

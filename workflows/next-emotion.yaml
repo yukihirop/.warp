@@ -1,0 +1,30 @@
+name: Next && Emotion && yarn dev
+tags:
+  - next
+  - emotion
+command: |-
+  npx create-next-app@latest --ts {{app_name}} && \
+  cd {{app_name}} && \
+  yarn add -D @emotion/react @emotion/styled @emotion/css @emotion/babel-plugin @emotion/babel-preset-css-props && \
+  cat <<EOF > .babelrc
+  {
+    "presets": [
+      [
+        "@babel/preset-react",
+        { "runtime": "automatic", "importSource": "@emotion/react" }
+      ],
+      [
+        "@motion/babel-preset-css-prop",
+        {
+          "autoLabel": "dev-only",
+          "labelFormat": "[local]"
+        }
+      ]
+    ],
+    "plugins": ["@emotion/babel-plugin"]
+  }
+  EOF && \
+  yarn dev
+arguments:
+  - name: app_name
+    description: Application Name
