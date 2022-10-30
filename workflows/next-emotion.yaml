@@ -23,7 +23,7 @@ command: |-
       ],
       "plugins": ["@emotion/babel-plugin"]
   }
-  EOF
+  EOF && \
   cat <<EOF > styles/media-query.ts
     export const sm = \`@media screen and (max-width: 640px)\`;
     export const md = \`@media screen and (max-width: 768px)\`;
