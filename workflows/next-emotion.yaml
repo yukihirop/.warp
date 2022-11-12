@@ -8,6 +8,7 @@ command: |-
   yarn && yarn add -D @emotion/react @emotion/styled @emotion/css @emotion/babel-plugin @emotion/babel-preset-css-prop && \
   cat ${HOME}/.warp/workflows/src/next-emotion/.babelrc > .babelrc && \
   cat ${HOME}/.warp/workflows/src/next-emotion/media-query.ts > styles/media-query.ts && \
+  cat ${HOME}/.yarn/workflows/src/next-emotion/_document.tsx > pages/_document.tsx && \
   git apply ${HOME}/.warp/workflows/src/next-emotion/next.config.js.patch
 arguments:
   - name: app_name
