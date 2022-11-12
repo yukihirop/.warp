@@ -9,7 +9,8 @@ command: |-
   cat ${HOME}/.warp/workflows/src/next-emotion/.babelrc > .babelrc && \
   cat ${HOME}/.warp/workflows/src/next-emotion/media-query.ts > styles/media-query.ts && \
   cat ${HOME}/.yarn/workflows/src/next-emotion/_document.tsx > pages/_document.tsx && \
-  git apply ${HOME}/.warp/workflows/src/next-emotion/next.config.js.patch
+  git apply ${HOME}/.warp/workflows/src/next-emotion/next.config.js.patch && \
+  git apply ${HOME}/.warp/workflows/src/next-emotion/tsconfig.json.patch
 arguments:
   - name: app_name
     description: Application Name
